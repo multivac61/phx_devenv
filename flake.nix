@@ -37,7 +37,9 @@
             inherit inputs pkgs;
             modules = [
               {
-                # https://devenv.sh/reference/options/
+                # `mix` doesn't like having .devenv/ folders at the root of the repository
+                devenv.dotfile = "/tmp/devenv-" + baseNameOf ./.;
+
                 packages =
                   with pkgs;
                   [
@@ -48,9 +50,7 @@
 
                 services.postgres = {
                   enable = true;
-                  initialScript = ''
-                    CREATE ROLE postgres WITH LOGIN PASSWORD 'postgres' SUPERUSER;
-                  '';
+                  initialScript = ''CREATE ROLE postgres WITH LOGIN PASSWORD 'postgres' SUPERUSER;'';
                   initialDatabases = [ { name = "phx_devenv_dev"; } ];
                 };
 
