@@ -37,13 +37,9 @@
             inherit inputs pkgs;
             modules = [
               {
-                packages =
-                  with pkgs;
-                  [
-                    git
-                    elixir
-                  ]
-                  ++ lib.optionals stdenv.isLinux [ inotify-tools ];
+                packages = with pkgs; [ git ] ++ lib.optionals stdenv.isLinux [ inotify-tools ];
+
+                languages.elixir.enable = true;
 
                 services.postgres = {
                   enable = true;
