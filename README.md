@@ -19,6 +19,7 @@ We then use [direnv](https://direnv.net/) and [nix-direnv](https://github.com/ni
 First make sure that you have entered into the development shell, using `nix develop` (manual) or `direnv` (automatically when entering dir).
 
 Following the excellent Phoenix documentation we need to run the following commands to bootstrap a new application.
+
 > [!WARNING]
 > Tailwind LSP and other code actions may not work until you run obtain and compile the dependencies
 > `mix deps.get && mix deps.compile`, which is automatically done when running `mix phx.new --install .` below
