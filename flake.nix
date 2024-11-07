@@ -37,9 +37,6 @@
             inherit inputs pkgs;
             modules = [
               {
-                # `mix` doesn't like having .devenv/ folders at the root of the repository
-                devenv.dotfile = "/tmp/devenv-" + baseNameOf ./.;
-
                 packages =
                   with pkgs;
                   [
