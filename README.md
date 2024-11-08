@@ -30,7 +30,7 @@ Following the excellent [Phoenix documentation](https://hexdocs.pm/phoenix/overv
 mix local.hex --force
 mix local.rebar --force
 mix archive.install hex phx_new
-mix phx.new --install 
+mix phx.new --install .
 sed -i.bak -e "s/hostname: \"localhost\"/socket_dir: System.get_env(\"PGHOST\")/" ./config/dev.exs && rm ./config/dev.exs.bak  # mac/linux compatible
 ```
 
