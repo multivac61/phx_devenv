@@ -9,7 +9,7 @@ This is an adaption of the [devenv Phoenix example](https://github.com/cachix/de
 
 If you do not have nix installed, please use the [Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer) to obtain a copy.
 
-## Optional
+### Optional
 
 For convenience you can use [direnv](https://direnv.net/) and [nix-direnv](https://github.com/nix-community/nix-direnv) to automatically enter a development shell when entering into the project directory.
 
