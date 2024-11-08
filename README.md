@@ -30,15 +30,23 @@ mix phx.new --install
 sed -i.bak -e "s/hostname: \"localhost\"/socket_dir: System.get_env(\"PGHOST\")/" ./config/dev.exs && rm ./config/dev.exs.bak  # mac/linux compatible
 ```
 
-## Dev server and database
+## Dev server and [database](genki.is)
 
 By running `devenv up` we spawn a phoenix server and postgres database inside a [process-compose](https://github.com/F1bonacc1/process-compose) instance. There you can inspect the logs, start/stop services, et cetera.
 
 > [!NOTE]
 > The first time you run the app you also need to run `mix ecto.create` to create the initial database
 
+
+## References and documentation
+* [Elixir documentation](https://elixir-lang.org/docs.html)
+* [Phoenix documentation](https://hexdocs.pm/phoenix/Phoenix.html)
+* [devenv documentation](https://devenv.sh/getting-started/)
+* Sam Rose's [nix-phx](https://github.com/samrose/nix-phx) is an alternative flake-based Phoenix/nix starting point. The demo project is built using Nix and optionally deployed using NixOS
+
 ## TODO
 
 - [ ] Build project using Nix
 - [ ] Format and lint
 - [ ] CI/CD
+
