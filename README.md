@@ -7,7 +7,11 @@ I wanted a simple template repo that had everything needed work on [Phoenix appl
 
 This is an adaption of the [devenv Phoenix example](https://github.com/cachix/devenv/tree/main/examples/phoenix)  where we use a basic [Nix flake with devenv](https://devenv.sh/guides/using-with-flakes/#modifying-your-flakenix-file) to manage dependencies, as well as managing the postgres instance.
 
-We then use [direnv](https://direnv.net/) and [nix-direnv](https://github.com/nix-community/nix-direnv) to automatically enter a development shell when you `cd` into the project directory.
+If you do not have nix installed, please use the [Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer) to obtain a copy.
+
+## Optional
+
+For convenience you can use [direnv](https://direnv.net/) and [nix-direnv](https://github.com/nix-community/nix-direnv) to automatically enter a development shell when entering into the project directory.
 
 > [!CAUTION]
 > If using `direnv`, storing the `.direnv` folder along with the code will cause issues. [See here for a workaround.](https://github.com/direnv/direnv/wiki/Customizing-cache-location#hashed-directories)
